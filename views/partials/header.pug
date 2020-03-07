@@ -1,23 +1,4 @@
-style.
-  .dropdown-anchors {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: all 0.2s linear;
-    color: white !important;
-    font-weight:500 !important;
-  }
-
-  .dropdown-anchors:hover {
-    color: #4da5f4 !important;
-    background-color: transparent;
-  }
-
-  .brandName {
-    font-size:19px;
-  }
-
-.navbar.navbar-default.navbar-fixed-top(style="background-color:rgb(24,55,147)")
+.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -26,7 +7,7 @@ style.
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href=`/`)
-        h5.brandName(style="color:white;margin-right:-10px;margin-top:0px;") #{brandName}
+        h5.brandName #{brandName}
     .collapse.navbar-collapse
       ul.nav.navbar-nav.front-header
         li(class=(title == 'Home') ? 'active' : undefined)
@@ -58,7 +39,7 @@ style.
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 span= 'Support'
                 i.caret
-              ul.dropdown-menu(style="background-color:rgb(24,55,147);max-width: 100px;min-width:100px;margin-right: -6px;")
+              ul.dropdown-menu
                 li(class=(title == 'Emails') ? 'active' : undefined)
                   a.dropdown-anchors(href=`/support/emails`) Emails
 
@@ -68,7 +49,7 @@ style.
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 span= 'Mod'
                 i.caret
-              ul.dropdown-menu(style="background-color:rgb(24,55,147);max-width: 100px;min-width:100px;margin-right: -19px;")
+              ul.dropdown-menu
                 li(class=(title == 'Reports') ? 'active' : undefined)
                   a.dropdown-anchors(href=`/support/reports`) Reports
                 li(class=(title == 'Pending') ? 'active' : undefined)
@@ -80,7 +61,7 @@ style.
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 span= 'Admin'
                 i.caret
-              ul.dropdown-menu(style="background-color:rgb(24,55,147);max-width: 159px;margin-right: -47px;")
+              ul.dropdown-menu
                 li
                   a.dropdown-anchors(href=`/admin/adminAudit`) Admin Audit
                 li(class=(title == 'Comments') ? 'active' : undefined)
@@ -104,8 +85,6 @@ style.
 
         //li(class=(title == 'Features') ? 'active' : undefined)
         //  a(href=`/features`) Features
-        li(class=(title == 'About') ? 'active' : undefined)
-          a(href=`/about`) About
 
         // if user not logged in
         if !user
@@ -129,19 +108,19 @@ style.
             a.dropdown-toggle(href='#', data-toggle='dropdown')
               span #{user.channelName || user.channelUrl } (#{unreadNotifAmount}) &nbsp
               i.caret
-            ul.dropdown-menu(style="background-color:rgb(24,55,147);max-width: 147px;")
+            ul.dropdown-menu
               li
-                a.dropdown-anchors(href=`/notifications` style="color:white;") Notifications (#{unreadNotifAmount})
+                a.dropdown-anchors(href=`/notifications`) Notifications (#{unreadNotifAmount})
               li
-                a.dropdown-anchors(href=`/user/` + user.channelUrl style="color:white;") My Channel
+                a.dropdown-anchors(href=`/user/` + user.channelUrl) My Channel
               li
-                a.dropdown-anchors(href=`/account` style="color:white;") My Account
+                a.dropdown-anchors(href=`/account`) My Account
 
               li(class=(title == 'Upload') ? 'active' : undefined)
-                a.dropdown-anchors(href=`/upload` style="color:white;") Upload
+                a.dropdown-anchors(href=`/upload`) Upload
               li.divider
               li
-                a.dropdown-anchors(href=`/logout` style="color:white;") Logout
+                a.dropdown-anchors(href=`/logout`) Logout
 
 if !user
   script.

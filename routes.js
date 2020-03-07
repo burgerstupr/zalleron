@@ -122,6 +122,7 @@ function frontendRoutes(app){
 
   /** publicly available routes **/
   app.get('/', publicController.index);
+  app.get('/stats', publicController.stats);
   app.get('/about', publicController.about);
   app.get('/termsofservice', publicController.tos);
   app.get('/privacy', publicController.privacy);

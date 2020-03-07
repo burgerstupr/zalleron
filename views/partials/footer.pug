@@ -5,24 +5,19 @@ style.
   }
 
 footer
+
   .container.text-center
-    p.pull-left © 2020 #{brandName} &nbsp
+    p.pull-left.cr © #{new Date().getFullYear()} #{brandName} &nbsp
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://github.com/mayeaux/nodetube" target="_blank") GitHub
+    .link-container
+      a.footer-link(href='/stats') Stats
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://discord.gg/ejGah8H" target="_blank") Discord
+      a.footer-link(href='/about') About
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://riot.im/app/#/room/#nodetube:matrix.org" target="_blank") Riot.im
+      a.footer-link(href='/termsofservice') Terms Of Service
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://twitter.com/nodetube_org" target="_blank") Twitter
+      a.footer-link(href='https://github.com/burgerstupr/zalleron' target='_blank') GitHub
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://reddit.com/r/nodetube" target="_blank") Reddit
+      a.footer-link(href='https://discord.gg/KaQUHEA' target='_blank') Discord
 
-    a.pull-left(style="color:#aaa;margin-right:10px;text-decoration:underline;" href="https://fosstodon.org/@nodetube" target="_blank") Fosstodon
-
-    a.pull-left(style="color:#aaa;margin-right:10px;" href="/termsofservice") Terms Of Service
-
-
-
-
-
+      a.footer-link(href='https://gab.com/zalleron' target='_blank') Gab

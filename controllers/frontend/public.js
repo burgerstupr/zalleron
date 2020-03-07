@@ -26,7 +26,30 @@ if(!process.env.FILE_HOST  || process.env.FILE_HOST == 'false'){
  * Home page.
  */
 exports.index = async(req, res) => {
+  // console.log(viewAmount);
 
+  // console.log('set index');
+
+  res.render('public/home', {
+    title: 'Home'
+  });
+};
+
+/**
+ * GET /
+ * About page.
+ */
+exports.about = (req, res) => {
+  res.render('public/about', {
+    title: 'About'
+  });
+};
+
+/**
+ * GET /
+ * Stats page.
+ */
+exports.stats = (req, res) => {
   const response = indexResponse;
   let mediaAmount, channelAmount, viewAmount;
 
@@ -40,25 +63,11 @@ exports.index = async(req, res) => {
     viewAmount = response.viewAmount;
   }
 
-  // console.log(viewAmount);
-
-  // console.log('set index');
-
-  res.render('public/home', {
-    title: 'Home',
+  res.render('public/stats', {
+    title: 'Stats',
     mediaAmount,
     channelAmount,
     viewAmount
-  });
-};
-
-/**
- * GET /
- * About page.
- */
-exports.about = (req, res) => {
-  res.render('public/about', {
-    title: 'About'
   });
 };
 
